@@ -36,7 +36,7 @@ func Dec2ThirtySix(d10 int64) string {
 func ThirtySix2Dec(StrHex36 string) int64 {
 
 	var Base36To10 int //每位36进制基数对应的10进制数据大小
-	var Hex10 int64  //被返回10进制数据
+	var Dec10 int64  //被返回10进制数据
 	var Base36 string  //36进制基数
 
 	var StrHex36Len int = len(StrHex36)
@@ -44,9 +44,9 @@ func ThirtySix2Dec(StrHex36 string) int64 {
 	for Index := 1; Index <= StrHex36Len; Index = Index + 1 {
 		Base36 = StrHex36[Index-1 : Index]
 		Base36To10 = strings.Index(ThirtySixStrs, Base36)
-		Hex10 = Hex10 + int64(float64(Base36To10)*math.Pow(float64(36), float64(StrHex36Len-Index) ))
+		Dec10 = Dec10 + int64(float64(Base36To10)*math.Pow(float64(36), float64(StrHex36Len-Index) ))
 
 	}
 
-	return int64(Hex10)
+	return int64(Dec10)
 }
