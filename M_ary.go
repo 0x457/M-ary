@@ -50,18 +50,3 @@ func ThirtySix2Dec(StrHex36 string) int64 {
 
 	return int64(Hex10)
 }
-//
-//func main() {
-//
-//	for int10 := float64(1); int10 < 10000; int10 = int10 + 1 {
-//		h36 := Dec2ThirtySix(int10)
-//		i10 := ThirtySix2Dec(h36)
-//		if i10 != float64(int10) {
-//			fmt.Printf("convert err %d => %s => %d \n", int10, h36, i10)
-//		}
-//		h36_2 := int2hex36(i10 + 1)
-//		fmt.Printf("convert  %s => %s \n", h36, h36_2)
-//	}
-//
-//	fmt.Println("Hello, playground 52360", (360 / 36))
-//}
